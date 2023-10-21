@@ -1,0 +1,320 @@
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(162, 61%, 89%);
+    --clr-primary-2: hsl(162, 60%, 78%);
+    --clr-primary-3: hsl(162, 61%, 67%);
+    --clr-primary-4: hsl(162, 80%, 46%);
+    /* primary/main color */
+    --clr-primary-5: hsl(162, 73%, 46%);
+    /* lighter shades of primary color */
+    --clr-primary-6: #1aa179;
+    --clr-primary-7: #13795b;
+    --clr-primary-8: #0d503c;
+    --clr-primary-9: #06281e;
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(212, 33%, 89%);
+    --clr-grey-2: hsl(210, 31%, 80%);
+    --clr-grey-3: hsl(211, 27%, 70%);
+    --clr-grey-4: hsl(209, 23%, 60%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 28%, 39%);
+    --clr-grey-7: hsl(209, 34%, 30%);
+    --clr-grey-8: hsl(211, 39%, 23%);
+    --clr-grey-9: hsl(209, 61%, 16%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    --max-width: 1170px;
+    --fixed-width: 450px;
+    --clr-pink: #f28ab2;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #F1F5F8;
+    color: var(--clr-grey-9);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.45rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+
+.btn:hover {
+    background: #10b981;
+    color: white;
+}
+
+
+.btn-block {
+    width: 100%;
+}
+.btn {
+    cursor: pointer;
+    color: var(--white); 
+    border: transparent; 
+    padding: 0.375rem 0.75rem;
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+    text-transform: capitalize;
+    display: inline-block;
+}
+.info-btn, .delete-btn {
+    background: transparent;
+    border: transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid #10b981;
+    color: #10b981;
+    color: var(--clr-primary-5);
+    border: 1px solid var(--clr-primary-5);
+    font-weight: 700;
+    padding: .78rem;
+    letter-spacing: 1.35px;
+}
+
+.info-btn:hover,
+.delete-btn:hover {
+    background: #10b981;
+    color: #fff;
+}
+
+.no-tours a {
+  background: #49a6e9;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  padding-bottom: 0.4rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  color: #fff;
+  letter-spacing: 2px;
+  border-color: transparent;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+#tours {
+  margin: 5rem auto;
+  max-width: 650px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#tours > h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#tours > h2 span {
+  height: 5px;
+  display: block;
+  width: 96px;
+  background-color: #60bafa;
+  margin: 10px auto 0 auto;
+}
+.tour-item {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+.tour-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.tour-item > img:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.tour-item .tour-content {
+  padding: 1.5rem 2rem;
+  padding-bottom: 2rem;
+  background: #fff;
+}
+.tour-item .tour-content .title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.tour-item .tour-content .title-price h3 {
+  color: #102a42;
+}
+.tour-item .tour-content .title-price span {
+  color: #49a6e9;
+  padding: 4px 10px;
+  font-weight: 700;
+  background-color: #ebf7ff;
+  border-radius: 5px;
+}
+.tour-content .tour-text {
+  color: #617d98;
+  font-size: 16px;
+  line-height: 24px;
+}
+.tour-content .tour-text p {
+  display: inline-block;
+}
+.tour-item .tour-content .tour-text button {
+  background-color: transparent;
+  border: none;
+  color: #1898f3;
+  text-transform: capitalize;
+  font-size: 17px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.tour-content > a:last-child {
+  padding: 3px 25px;
+  border-radius: 5px;
+  border: 1px solid;
+  color: #bb2525;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+.tour-content > a:last-child:hover {
+  background-color: #bb2525;
+  color: #fff;
+}
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .3s;
+  color: #fff;
+  background-color: var(--clr-primary-4); 
+  font-size: 60px;
+  @media(max-width: 991.98px) {
+    font-size: 45px;
+  }
+  @media(max-width: 767.98px) {
+    font-size: 40px;
+  }
+}
+
+#loading.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+@media(max-width: 767.98px) {
+  #tours > h2 {
+    font-size: 35px;
+  }
+}
+@media(max-width:575.98px) {
+  .tour-item .tour-content .tour-text button {
+    font-size: 17px;
+  }
+  .tour-item .tour-content {
+    padding: 1.35rem 1.5rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .delete-btn {
+    padding: 0.73rem;
+    letter-spacing: 1.3px;
+    font-size: 13px;
+}
+}
